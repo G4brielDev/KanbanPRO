@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#111827" />
+    <meta
+      name="description"
+      content="KANBAN PRO — organização pessoal de tarefas com board, filtros e persistência local."
+    />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/variables.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="./css/animations.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <title>KANBAN PRO</title>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Gestão pessoal</p>
+          <h1>KANBAN PRO</h1>
+        </div>
+        <div class="topbar-actions">
+          <label class="search-box" for="searchInput">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M10.5 4a6.5 6.5 0 1 1 0 13 6.5 6.5 0 0 1 0-13Zm0 0 8 8"
+              />
+            </svg>
+            <input
+              id="searchInput"
+              type="search"
+              placeholder="Buscar tarefas"
+            />
+          </label>
+          <button
+            id="themeToggle"
+            class="icon-button"
+            aria-label="Alternar tema"
+          >
+            ☀︎
+          </button>
+          <button id="addTaskButton" class="primary-button">
+            + Nova tarefa
+          </button>
+        </div>
+      </header>
+
+      <section class="toolbar" aria-label="Ferramentas">
+        <div class="filter-group" id="filterGroup"></div>
+        <div class="toolbar-actions">
+          <button id="exportJsonButton" class="ghost-button">
+            Exportar JSON
+          </button>
+          <label class="ghost-button file-button">
+            Importar JSON
+            <input
+              id="importJsonInput"
+              type="file"
+              accept="application/json"
+              hidden
+            />
+          </label>
+          <button id="exportCsvButton" class="ghost-button">
+            Exportar CSV
+          </button>
+        </div>
+      </section>
+
+      <main class="layout">
+        <section class="board-section" aria-label="Quadro Kanban">
+          <div id="board" class="board"></div>
+        </section>
+        <aside class="sidebar">
+          <section class="card stats-card">
+            <h2>Resumo</h2>
+            <div id="statsGrid" class="stats-grid"></div>
+          </section>
+          <section class="card calendar-card">
+            <div class="card-header">
+              <h2>Calendário</h2>
+              <div id="calendarMonthLabel" class="muted"></div>
+            </div>
+            <div id="calendar" class="calendar"></div>
+          </section>
+        </aside>
+      </main>
+    </div>
+
+    <dialog id="taskModal" class="modal"></dialog>
+    <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

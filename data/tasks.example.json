@@ -1,0 +1,10 @@
+{
+  "columns": [
+    { "id": "backlog", "title": "Backlog" },
+    { "id": "todo", "title": "To Do" },
+    { "id": "doing", "title": "Doing" },
+    { "id": "review", "title": "Review" },
+    { "id": "done", "title": "Done" }
+  ],
+  "tasks": []
+}

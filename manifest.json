@@ -1,0 +1,9 @@
+{
+  "name": "KANBAN PRO",
+  "short_name": "KanbanPro",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#111827",
+  "icons": []
+}
